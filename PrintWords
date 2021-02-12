@@ -1,0 +1,33 @@
+public class PrintWords {
+
+    public static void main(String[] args) {
+        Scanner inputScanner = new Scanner(System.in);
+        String inputWord = inputScanner.nextLine();
+        if (inputWord != null && !inputWord.isEmpty()) {
+            if (inputWord.length() % 2 != 0) {
+                int mid = inputWord.length() / 2;
+                for (int i = mid; i < inputWord.length(); i++) {
+                    for (int j = mid; j <= i; j++) {
+                        System.out.print(inputWord.charAt(j));
+                    }
+                    System.out.println("");
+                    if (i == inputWord.length()-1) {
+                        for (int k = 0; k < mid; k++) {
+                            for (int m = 0; m <= k; m++) {
+                                System.out.print(inputWord.substring(mid, inputWord.length())+ inputWord.charAt(m));
+                            }
+                            System.out.println("");
+                        }
+
+                    }
+                }
+
+            } else {
+                System.out.print("Please enter Characters in odd Length");
+            }
+        } else {
+            System.out.print("Please enter Valid Character");
+        }
+
+    }
+}
