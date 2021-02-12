@@ -15,7 +15,10 @@ public class PrintWords {
                    System.out.println("");
         
                 }
+                
+                String misSubString = inputWord.substring(mid, inputWord.length());
                 for (int k = 0; k < mid; k++) {
+                    System.out.print(misSubString);
                     for (int m = 0; m <= k; m++) {
                         System.out.print(inputWord.charAt(m));
                     }
